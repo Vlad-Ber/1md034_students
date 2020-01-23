@@ -10,24 +10,62 @@
 	  <h1> Welcome to BurgerOnline </h1>
 	  <h2> Our selection </h2>
 	  <p> Here are our burgers: </p>
-	  <h3>Double Bacon</h3>
-	  <img src = "https://www.max.se/contentassets/96a590c660f54c8b83bc5080b036fecf/product_gdl-umami-bacon-burger2.jpg" width = 350 >
-	  <ul>
-	    <li> Loaded with crispy bacon </li>
-	    <li> 2000 kcal </li>
-	    <li> Contains meat </li>
-	  </ul>
-	  <dl>
-	    <dt> Allergies: </dt>
-	    <dd> Nuts/Gluten </dd>
-	  </dl>
+	  <table>
+	    <tbody>
+	      <tr>
+		<td><h3>Double Bacon</h3>
+		<img src = "https://www.max.se/contentassets/96a590c660f54c8b83bc5080b036fecf/product_gdl-umami-bacon-burger2.jpg" width = 350 height = "200">
+		<ul>
+		  <li> Loaded with crispy bacon </li>
+		  <li> 2000 kcal </li>
+		  <li> Contains meat </li>
+		  <li> Very Cheesy (contains lactose) </li>
+		</ul></td>
+		<td><h3>Chili Cheese</h3>
+		  <img src = "http://epiqstore.com/wp-content/uploads/2019/10/20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" width = "350" height = "200">
+		  <ul>
+		    <li> Hot </li>
+		    <li> 1500 kcal </li>
+		    <li> Gluten Free</li>
+		    <li> Juicy</li>
+		    <ul></td>
+		<td><h3>Original</h3>
+		  <img src = "https://cdn.newsapi.com.au/image/v1/dfd657934bf7bf648edbdc19670bf977?width=650" width = "350" height = "200">
+		  <ul>
+		    <li> Child Friendly </li>
+		    <li> 750 kcal </li>
+		    <li> Contains Nuts</li>
+		    <li> Very Tasty</li>
+		    <ul></td>
+	      </tr>
+	    </tbody>
+	  </table>
 	</section>
 	<section>
-	  <h2> Information </h2>
-	  <p> Customer Information: </p>
+	  <h2> Customer Information </h2>
+	  <p> This is where you provide necessary information </p>
+	  <h3> Delivery information: </h3>
+	  <form>
+	    <p>
+	      <label for="First- and Last name">Full name</label><br>
+	      <input type ="text" id = "First- and Last name" name = "fn" required= "required" placeholder = "First- and Last name" />
+	    </p>
+	    <p>
+	      <label for="E-mail adress">E-mail</label><br>
+	      <input type ="text" id = "E-mail adress" name = "fn" required= "required" placeholder = "E-mail adress" />
+	    </p>
+	    <p>
+	      <label for="Street name">Street</label><br>
+	      <input type ="text" id = "Street name" name = "fn" required= "required" placeholder = "Street name" />
+	    </p>
+	    <p>
+	      <label for="House number">House</label><br>
+	      <input type ="number" id = "House number" name = "fn" required= "required" placeholder = "House number" />
+	    </p>
+	  </form>
 	</section>
       </main>
-      <footer> Hypothetical Burgers Inc</footer>
+      <footer> © Hypothetical Burgers Inc</footer>
     </body>
 </html>
 
