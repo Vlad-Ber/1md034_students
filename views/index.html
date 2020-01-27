@@ -52,16 +52,33 @@
 	    </p>
 	    <p>
 	      <label for="E-mail adress">E-mail</label><br>
-	      <input type ="text" id = "E-mail adress" name = "fn" required= "required" placeholder = "E-mail adress" />
+	      <input type ="text" id = "E-mail adress" name = "email" required= "required" placeholder = "E-mail adress" />
 	    </p>
 	    <p>
 	      <label for="Street name">Street</label><br>
-	      <input type ="text" id = "Street name" name = "fn" required= "required" placeholder = "Street name" />
+	      <input type ="text" id = "Street name" name = "streetn" required= "required" placeholder = "Street name" />
 	    </p>
 	    <p>
 	      <label for="House number">House</label><br>
-	      <input type ="number" id = "House number" name = "fn" required= "required" placeholder = "House number" />
+	      <input type ="number" id = "House number" name = "housen" required= "required" placeholder = "House number" />
 	    </p>
+	    <p>
+	      <label for="recipient">Payment Method</label><br />
+	      <select id="recipient" name="rcp">
+		<option = "selected">Card</option>
+		<option>Paypal</option>
+		<option>Pay Now</option>
+		<option>Swish</option>
+		<option>Klarna</option>
+		<option>Klarna now</option>
+		<option>Faktura</option>
+	      </select>
+	    </p>
+	    <p>Please select your gender:</p>
+	    <input type ="radio" name = "gender" required= "required" value="male"> Male<br>
+	    <input type ="radio" name = "gender" required= "required" value="female"> Female<br>
+	    <input type ="radio" name = "gender" checked ="checked" required= "required" value="Not wish to provide"> Not wish to provide<br>
+	   <button type="submit"><img src="http://sabreuse.com/wp-content/uploads/2013/06/red-submit-button-hi.png"width = "100" height="40" /> Send Info</button>
 	  </form>
 	</section>
       </main>
