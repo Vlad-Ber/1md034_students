@@ -22,7 +22,9 @@ let b4 = new menuItem('Chili cheese (Veg)', 'Hot', '1500 kcal', 'Gluten', 'Lacto
 
 let b5 = new menuItem('Original (Veg)', 'Child Friendly', '750 kcal', 'Very Tasty', 'Gluten Free', 'https://cdn.newsapi.com.au/image/v1/dfd657934bf7bf648edbdc19670bf977?width=650');
 
-console.log(b1.kcal());
-
-
-
+var menu = [b1, b2, b3, b4, b5];
+var ids = ["l1", "l2", "l3", "l4", "l5"];
+for (var x = 0; x < 5; x++)
+{
+	document.getElementById(ids[x]).innerHTML = menu[x].name;
+}
