@@ -1,3 +1,5 @@
+/*
+
 function menuItem(bName, i1, i2, i3, i4, img){
     this.name = bName;
     this.info1 = i1;
@@ -26,7 +28,7 @@ var menu = [b1, b2, b3, b4, b5];
 
 var ids = ["l1", "l2", "l3", "l4", "l5"];
 
-var idS = ["Double", "Chili", "Original", "chiliVeg", "origVeg"];
+var idS = ["Double", "Chili", "Original", "chiliVeg", "origVeg"];*/
 
 /*
 for (var x = 0; x < 5; x++)

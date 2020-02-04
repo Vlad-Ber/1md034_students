@@ -14,7 +14,7 @@
 const box = new Vue({
     el: "#funka",
     data: {
-	menu: menu
+	food: food
   },
 });
 
