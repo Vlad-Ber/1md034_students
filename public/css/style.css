@@ -97,3 +97,10 @@ table{
 section {
     margin: 50px 10px;
 }
+
+.table_wrapper {
+    display: grid;
+    grid-gap: 50px;
+    text-align: center;
+    grid-template-columns: 300px 300px 300px ;
+}

@@ -3,25 +3,38 @@
   <head>
     <link rel="stylesheet" type="text/css" href= "css/style.css">
     <script src="js/js_script.js" defer></script>
-    <script src="js/vue_script.js"></script>
+    <script src="js/vue_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
         <title>Burger Online</title>
         <meta charset="utf-8"/>
-  </head>! 
+  </head>
     <body>
       <main>
 	<header class = "header">
 	<h1 id = "htext"> Welcome to BurgerOnline </h1>
-	  <img src = "https://www.mmains.net/wp-content/uploads/2016/05/Header-Food-on-Table-in-Restaurant.jpg" width = 1865 height = 200 id="himg" >
+	  <img src = "https://www.mmains.net/wp-content/uploads/2016/05/Header-Food-on-Table-in-Restaurant.jpg" width = 1865 height = 200 id="himg">
 	</header>
 	<section class="burgers">
 	  <h2> Our selection </h2>
 	  <p> Here are our burgers: </p>
-	  
-	  <div class="row">
-	    <div class="column">
-	      <div id="Double"></div>
+	  <div id = "funka" class = "table_wrapper">
+	    <div v-for="(x,index) in menu">
+	      <h3> {{ x.name }} </h3>
+	      <img :src="x.image" width="250" height="175">
+	      <ul>
+		<li> {{ x.info1 }} </li>
+		<li> {{ x.info2 }} </li>
+		<li> {{ x.info3 }} </li>
+		<li> {{ x.info4 }} </li>
+	      </ul>
 	    </div>
+	  </div>
+
+<!-- 
+     <div class="row">
+       <div class="column">
+	 <div id="Double"></div>
+       </div>
 	    <div class="column">
 	      <div id="Chili"></div>
 	    </div>
@@ -35,7 +48,7 @@
 	      <div id="origVeg"></div>
 	    </div>
 	  </div>
-	 <!--
+
 	  <div class="wrapper">
 	    <div class="box A">
 	      <td><h3>Double Bacon</h3>
