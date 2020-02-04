@@ -24,7 +24,50 @@ let b5 = new menuItem('Original (Veg)', 'Child Friendly', '750 kcal', 'Very Tast
 
 var menu = [b1, b2, b3, b4, b5];
 var ids = ["l1", "l2", "l3", "l4", "l5"];
+
+var idS = ["Double", "Chili", "Original", "chiliVeg", "origVeg"];
+
 for (var x = 0; x < 5; x++)
 {
-	document.getElementById(ids[x]).innerHTML = menu[x].name;
+    let id = document.getElementById(idS[x]);
+    //NAMN
+    let btn = document.createElement('h3');
+    let hText = document.createTextNode(menu[x].name);
+    btn.appendChild(hText);
+    id.appendChild(btn);
+    //BILD
+    let img = document.createElement("IMG");
+    img.src = menu[x].image;
+    img.width = 350;
+    img.height = 200;
+    id.appendChild(img);
+    
+    //UL
+    let ul = document.createElement("UL");
+    id.appendChild(ul);
+    //INFO 1
+    
+    let li1 = document.createElement("LI");
+    let info1 = document.createTextNode(menu[x].info1);
+    li1.appendChild(info1);
+    id.appendChild(li1);
+    //INFO 2
+    let li2 = document.createElement("LI");
+    let i2 = document.createTextNode(menu[x].info2);
+    li2.appendChild(i2);
+    id.appendChild(li2);
+    //INFO 3
+    let li3 = document.createElement("LI");
+    let i3 = document.createTextNode(menu[x].info3);
+    li3.appendChild(i3);
+    id.appendChild(li3);
+    //INFO 4
+    let li4 = document.createElement("LI");
+    let i4 = document.createTextNode(menu[x].info4);
+    li4.appendChild(i4);
+    id.appendChild(li4);
+
 }
+
+
+

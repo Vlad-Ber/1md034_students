@@ -50,12 +50,23 @@ body {
     margin: 30px 10px;
 }
 
+.column{
+    float: left;
+    width: 20%;
+}
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
 .wrapper {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 400px 400px 400px;
     background-color: black;
     color: white;
+    padding-left: 30px;
 }
 
 .a {

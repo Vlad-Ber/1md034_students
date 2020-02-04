@@ -1,3 +1,21 @@
+/* HTML
+ <div id ="myID">
+  <div v-for = "(x,index) in menu">
+   <h4> {{ x.name }}</h4>
+   <ul>
+   <li> {{ x.info3}} </li>
+   <li> {{ x.info1 }} </li>
+   <li> {{ x.info2 }} </li>
+   </ul>
+  </div>
+ </div>
+
+/
+
+
+
+
+/*
 function menuItem(bName, i1, i2, i3, i4, img){
     this.name = bName;
     this.info1 = i1;
@@ -29,4 +47,4 @@ const mat = new Vue({
   data: {
   menu: menu
   },
-})
+})*/
