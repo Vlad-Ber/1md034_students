@@ -1,20 +1,25 @@
-/* HTML
- <div id ="myID">
-  <div v-for = "(x,index) in menu">
-   <h4> {{ x.name }}</h4>
-   <ul>
-   <li> {{ x.info3}} </li>
-   <li> {{ x.info1 }} </li>
-   <li> {{ x.info2 }} </li>
-   </ul>
-  </div>
- </div>
-*/
-
 const box = new Vue({
     el: "#funka",
     data: {
-	food: food
-  },
+	food: food,
+	checkBurg: []
+    },
 });
 
+const vm = new Vue({
+    el: "#submitB",
+    data: {
+	name: "",
+	mail: "",
+	street: "",
+	house: "",
+	gender: "",
+	pay: "",
+	output: ""
+    },
+    methods: {
+	markDone: function(){
+	    this.output = this.name + ', ' + this.mail + ', ' + this.street + ', ' + this.house + ', ' + this.gender + ', ' + this.pay + ' YOUR ORDER: ' + box.checkBurg 
+	}
+    }
+});

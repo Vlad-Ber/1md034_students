@@ -21,6 +21,7 @@
 	  <div id = "funka" class = "table_wrapper">
 	    <div v-for="(x,index) in food">
 	      <h3> {{ x.name }} </h3>
+	        <input type="checkbox" :value="x.name" :id="x.name" v-model="checkBurg">
 	      <img :src="x.img" width="250" height="175">
 	      <ul>
 		<li> {{ x.desc1 }} </li>
@@ -30,7 +31,7 @@
 	    </div>
 	  </div>
 
-<!-- 
+<!--
      <div class="row">
        <div class="column">
 	 <div id="Double"></div>
@@ -90,25 +91,26 @@
 	 
 	  <h3> Delivery information: </h3>
 	  <form>
+	    <div id="submitB">
 	    <p>
 	      <label for="First- and Last name">Full name</label><br>
-	      <input type ="text" id = "First- and Last name" name = "fn" required= "required" placeholder = "First- and Last name" />
+	      <input v-model="name" type ="text" id = "FirstLastname" name = "fn" required= "required" placeholder = "First- and Last name" />
 	    </p>
 	    <p>
 	      <label for="E-mail adress">E-mail</label><br>
-	      <input type ="text" id = "E-mail adress" name = "email" required= "required" placeholder = "E-mail adress" />
+	      <input v-model="mail" type="text" id ="E-mail" name = "email" required= "required" placeholder = "E-mail adress" />
 	    </p>
 	    <p>
 	      <label for="Street name">Street</label><br>
-	      <input type ="text" id = "Street name" name = "streetn" required= "required" placeholder = "Street name" />
+	      <input v-model="street" type ="text" id = "StreetName" name = "streetn" required= "required" placeholder = "Street name" />
 	    </p>
 	    <p>
 	      <label for="House number">House</label><br>
-	      <input type ="number" id = "House number" name = "housen" required= "required" placeholder = "House number" />
+	      <input v-model="house" type ="text" id = "HouseNumber" name = "housen" required= "required" placeholder = "House number" />
 	    </p>
 	    <p>
 	      <label for="recipient">Payment Method</label><br />
-	      <select id="recipient" name="rcp">
+	      <select v-model="pay" id="recipient" name="rcp">
 		<option = "selected">Card</option>
 		<option>Paypal</option>
 		<option>Pay Now</option>
@@ -119,10 +121,13 @@
 	      </select>
 	    </p>
 	    <p>Please select your gender:</p>
-	    <input type ="radio" name = "gender" required= "required" value="male"> Male<br>
-	    <input type ="radio" name = "gender" required= "required" value="female"> Female<br>
-	    <input type ="radio" name = "gender" checked ="checked" required= "required" value="Not wish to provide"> Not wish to provide<br>
-	    <button class ="button">Submit</button>
+	    <input v-model="gender" id ="male" type ="radio" name = "gender" required= "required" value="Male"> Male<br>
+	    <input v-model="gender" id ="female" type ="radio" name = "gender" required= "required" value="emale"> Female<br>
+	    <input v-model="gender" id ="noProvide" type ="radio" name = "gender" checked ="checked" required= "required" value="Not wish to provide"> Not wish to provide<br>
+	    
+	      <button v-on:click="markDone()" id="knapp" type = "button" class ="button" >Submit</button>
+	       <p> {{ output }} </p>
+	    </div>
 	  </form>
 	  </section>
 	</section>

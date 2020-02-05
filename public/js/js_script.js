@@ -74,4 +74,31 @@ for (var x = 0; x < 5; x++)
 }
 */
 
+/*
+let myButton = document.getElementById("knapp");
+myButton.addEventListener("click", functionName);
 
+function functionName(){
+    console.log("hej");
+    var names = document.getElementById("FirstLastname").value;
+    var mail = document.getElementById("E-mail").value;
+    var sName = document.getElementById("StreetName").value;
+    var houseN = document.getElementById("HouseNumber").value;
+    var recipient = document.getElementById("recipient").value;
+    var gender;
+    if(document.getElementById("male").checked == true){
+	gender = document.getElementById("male").value;
+    }
+    if(document.getElementById("female").checked == true){
+	gender = document.getElementById("female").value;
+    }
+    if(document.getElementById("noProvide").checked == true){
+	gender = document.getElementById("noProvide").value;
+    }
+
+    var info = [names, mail, sName, houseN, gender];
+    console.log(info);
+}
+
+    
+*/
