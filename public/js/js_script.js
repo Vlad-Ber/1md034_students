@@ -1,5 +1,5 @@
-/*
 
+/*
 function menuItem(bName, i1, i2, i3, i4, img){
     this.name = bName;
     this.info1 = i1;
