@@ -1,23 +1,15 @@
 'use strict';
 const socket = io();
 
-
-const box = new Vue({
-    el: "#funka",
-    data: {
-	food: food,
-	checkBurg: []
-    },
-});
-
 const vm = new Vue({
     el: "#submitB",
     data: {
+	food: food,
 	name: "",
 	mail: "",
 	gender: "",
 	pay: "",
-	output: "",
+	burgerss: [],
 	orders: {},
 	order: {
 	    visible: false,
@@ -28,9 +20,6 @@ const vm = new Vue({
 	amountOrders: 0,
     },
     methods: {
-	markDone: function(){
-	    this.output = this.name + ', ' + this.mail + ', ' + this.gender + ', ' + this.pay + ' YOUR ORDER: ' + box.checkBurg 
-	},
 	getNext: function() {
 	    /* This function returns the next available key (order number) in
 	     * the orders object, it works under the assumptions that all keys
@@ -51,7 +40,8 @@ const vm = new Vue({
 		    x: this.order.details.x,
 		    y: this.order.details.y,
 		},
-		orderItems: box.checkBurg,
+		orderItems: this.burgerss,
+		orderInfo: [this.name, this.mail, this.gender, this.pay]
 	    });
 	},
 	displayOrder: function(event) {
