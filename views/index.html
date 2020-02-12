@@ -121,16 +121,13 @@
 	    <input v-model="gender" id ="female" type ="radio" name = "gender" required= "required" value="emale"> Female<br>
 	    <input v-model="gender" id ="noProvide" type ="radio" name = "gender" checked ="checked" required= "required" value="Not wish to provide"> Not wish to provide<br>
 	    <div class="view-box">
-	      <div id="dots" v-on:click="addOrder">
-		<div 
-		  v-for="(order, key) in orders"
-		  v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-		  {{key}}
+	      <div id="dots" v-on:click="displayOrder">
+		<div v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+		  T
 		</div>
 	      </div>
 	    </div>
-	    
-	      <button v-on:click="markDone()" id="knapp" type = "button" class ="button" >Submit</button>
+	      <button v-if=order.visible v-on:click="addOrder" id="knapp" type = "button" class ="button" >Submit</button>
 	       <p> {{ output }} </p>
 	    </div>
 	  </form>
